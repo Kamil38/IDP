@@ -12,7 +12,7 @@ html {
 }
 
 #myvideo {
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -27,13 +27,14 @@ html {
 }
 
 .navbar {
+    padding-right: 10px;
     top: 0;
     left: 10%;
     width: 80%;
     height: 4rem;
     background-color: #EB452E;
     position: absolute;
-    /* z-index: 300; */
+    z-index: 300;
 }
 
 .sticky {
@@ -42,12 +43,12 @@ html {
 }
 
 .navbar-link {
-    font-size: 1.7rem;
+    font-size: .9rem;
     font-weight: 600;
-    color: #333;
-    margin: 0 3rem;
+    color: white;
+    margin: 0 1.7rem;
     letter-spacing: 0.3rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     position: relative;
     transition: color 0.2s;
 }
@@ -79,9 +80,84 @@ html {
     width: 130%;
 }
 
+.logo {
+    margin: 0;
+    padding: 0;
+    height: 30em;
+    width: 30em;
+    padding-right: 19em;
+    margin-right: 1.5em;
+}
+
+@supports ( (-webkit-appearance: none) or (-moz-appearance: none)) {
+    .switch{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+        width: 3.5em;
+        height: 1.6em;
+        border: .1em solid white;
+        border-radius: 2em;
+        background-color: #EB452E;
+        outline: none;
+        transition: background-color .5s linear;
+    }
+    .switch::after {
+        content: "";
+        background-color: #fff;
+        display: block;
+        position: relative;
+        top: .15em;
+        left: .15em;
+        width: 1.15em;
+        height: 1.15em;
+        border-radius: 2em;
+        transition: left .5s ease-in-out;
+    }
+    .switch:checked {
+        background-color: #EB452E;
+    }
+    .switch:checked::after {
+        left: 2em;
+    }
+    .switch:checked ~ .nl {
+        color: #c6bebe;
+    }
+    .switch:checked ~ .en {
+        color: white;
+    }
+    .groot {
+        font-size: 1em;
+    }
+}
+
+.padding {
+    padding-left: 400px;
+}
+
+.taaltekstNl {
+    padding: 10px;
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.taaltekstEn {
+    padding: 10px;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #c6bebe;
+}
+
 .center {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.rechts {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -90,9 +166,141 @@ html {
     height: 100vh;
 }
 
+.huyat {
+    position: relative;
+    left: 35px;
+    bottom: 20px;
+    letter-spacing: 1em;
+    font-size: 3em;
+}
+
+.social-menu ul {
+    position: absolute;
+    top: 57%;
+    left: 51.2%;
+	padding: 0;
+	margin: 0;
+	transform: translate(-50%, -50%);
+	display: flex;
+
+}
+
+.social-menu ul li {
+	list-style: none;
+	margin: 0 15px;
+}
+
+.social-menu ul li .fa {
+	font-size: 30px;
+	line-height: 60px;
+	transition: .6s;
+	color: #000;
+}
+
+.social-menu ul li .fa:hover {
+	color: #fff;
+}
+
+.social-menu ul li a {
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #fff;
+	text-align: center;
+	transition: .6s;
+	box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover {
+	transform: translate(0, -10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+	background-color: red;
+}
+
 .section-2 {
     width: 100%;
-    height: 100vh;
+    height: 200vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.overHuyat{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr;
+    grid-gap: 1em;
+    
+}
+.overHuyat2{
+    display: grid;
+    grid-template-columns: 0.1fr 1.1fr .5fr;
+    grid-gap: 1em;
+    margin-top: 5%;
+    margin-left: 18%; 
+}
+.overHuyat3{
+    display: grid;
+    grid-template-columns: .5fr 0.1fr 1.1fr ;
+    grid-gap: 1em;
+    margin-top: 5%;
+    margin-left: 15%; 
+}
+.numColor{
+    width: 80%; 
+    height: 12%;
+    background-color: #EB452E;
+    transform: skew(-25deg);
+    margin-top: -25%;
+    margin-left: 295%; 
+    z-index: 2;
+    
+}
+.number{
+    z-index: 3;
+    font-size: 40px;
+    margin-left: 285%;
+    position: relative;
+    background: none;
+}
+.section2img {
+    width: 40%;
+    transform: skew(-20deg);
+    margin-left: 25%; 
+    z-index: 1;
+}
+.contactKnop{
+    background-color: #EB452E;
+}
+#contact{
+    text-align: center;
+    padding: 4em;
+}
+#contact button{
+    margin: 3em;
+    padding: 1em;
+    border-radius: 25px;
+}
+#contact button:hover{
+    background-color: black;  
+  color: white;
+  border: 2px solid #EB452E;
+}
+.overHuyat p{
+    margin-top: 10%;
+    margin-right: 50%;
+}
+.overHuyat2 p{
+    margin-top: 10%;
+    margin-right: 5%;
+}
+.overHuyat3 p{
+    margin-top: 10%;
+    margin-right: 5%;
 }
 
 .section-3 {
@@ -103,4 +311,60 @@ html {
 .section-4 {
     width: 100%;
     height: 100vh;
+}
+
+
+
+
+@media screen and (min-width: 370px) and (max-width: 1200px){
+    .overHuyat{
+        display: grid;
+        grid-template-columns: 0.05fr 1.1fr 1fr;
+        grid-gap: 1em;
+        
+    }
+    .overHuyat p{
+        margin-top: -10%;
+      margin-right: 5%;
+    }
+    .overHuyat2{
+        display: grid;
+        grid-template-columns: 0.1fr 1.1fr 1fr;
+        grid-gap: 1em;
+        margin-top: 15%;
+        margin-left: 6%; 
+    }
+    .overHuyat2 p{
+        margin-top: -10%;
+      margin-right: 5%;
+    }
+    .overHuyat3{
+        display: grid;
+        grid-template-columns: 1fr 0.08fr 1.1fr ;
+        grid-gap: 1em;
+        margin-top: 15%;
+        margin-left: 10%; 
+    }
+    .overHuyat3 p{
+        margin-top: -10%;
+      margin-right: 5%;
+    }
+    .numColor{
+        width: 95%; 
+        height: 7%;
+        background-color: #EB452E;
+        transform: skew(-25deg) rotate(2deg);
+        margin-top: -20%;
+        margin-left: 195%; 
+        z-index: 2;
+        
+    }
+    .number{
+        z-index: 1;
+        font-size: 20px;
+        margin-left: 185%;
+        margin-top: 5%;
+       
+    
+    }
 }

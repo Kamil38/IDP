@@ -25,3 +25,7 @@ const mainFn = () => {
 };
 
 mainFn();
+
+function myFunction2() {
+  window.open('https://www.youtube.com/?gl=NL&hl=nl', '_blank')
+}
