@@ -237,10 +237,12 @@
           <a onClick="window.open('https://github.com/Kamil38/IDP/');" class="social-media-link">
             <i class="fab fa-github-square"></i>
           </a> 
-          <a onClick="window.open('https://www.youtube.com/channel/UCzQAU9KGtwioNyHTaa4bnVA/featured?view_as=subscriber');" class="social-media-link">
+          <a onClick="" class="social-media-link">
+            <!-- window.open('https://www.youtube.com/channel/UCzQAU9KGtwioNyHTaa4bnVA/featured?view_as=subscriber'); -->
             <i class="fab fa-youtube"></i>
           </a> 
-          <a onClick="window.open('https://www.facebook.com/kamilHLW');" class="social-media-link">
+          <a onClick="" class="social-media-link">
+            <!-- window.open('https://www.facebook.com/kamilHLW'); -->
             <i class="fab fa-facebook-square"></i>
           </a>
           <a onClick="window.open('https://www.instagram.com/huyatagency/');" class="social-media-link">
