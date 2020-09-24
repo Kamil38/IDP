@@ -6,6 +6,8 @@ const k2 = document.getElementById('k2');
 const sections = document.querySelectorAll("section");
 const navbarLinks = document.querySelectorAll(".navbar-link");
 mybutton = document.getElementById("myBtn");
+const smalltjes = document.querySelectorAll('.small');
+const bigtjes = document.querySelectorAll('.big');
 
 window.addEventListener("scroll", () => {
   mainFn();
@@ -92,4 +94,57 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+}
+
+
+//de Nodelist bigtjes in array stoppen(div).
+
+const alleBig =[]
+
+for(let i=0; i<bigtjes.length; i++){
+    alleBig.push(bigtjes[i]);
+    bigtjes[i].remove();
+
+    //element uit de DOM verwijderen.
+
+
+
+}
+const sluitknop = document.createElement('i');
+sluitknop.className = 'fas fa-times sk';
+sluitknop.addEventListener('click', sluiten);
+
+
+function box(nummer){
+    //modaall element maken
+    let modaall = document.createElement('div');
+    modaall.id = 'modaall';
+    modaall.addEventListener('click', sluiten);
+    let inhoud = document.createElement('div');
+    //modaall inhoud element maken
+    inhoud.className = 'modaallInhoud';
+    inhoud.innerHTML = alleBig[nummer].innerHTML;
+    inhoud.addEventListener('click', function(e){
+    e.stopPropagation();
+    });
+
+
+    modaall.append(inhoud);
+    inhoud.prepend(sluitknop);
+    document.body.append(modaall);
+
+    // var test = document.createElement('h1');
+    // test.innerHTML = 'MD!A';
+    // document.body.append(test);
+}
+
+// klik gebeurtenis op de small div's
+for (let i=0; i<smalltjes.length; i++){
+    smalltjes[i].addEventListener('click', function() {
+    box(i)
+
+});
+}
+function sluiten(){
+    document.getElementById('modaall').remove();
 }

@@ -29,9 +29,9 @@
         <a href="#section-3" class="navbar-link"><?php echo translate('ons-werk') ?></a>
         <a href="#section-4" class="navbar-link"><?php echo translate('contact') ?></a>
         <span class="keus-uit-2">   
-          <span id="k1" class="taalkleur keus-uit-2__label keus-uit-2--actief">NL</span>
+          <a id="k1" href="index.php?lang=nl" class="taalkleur keus-uit-2__label keus-uit-2--actief">NL</a>
             <input id="keuzeCB" class="keus-uit-2__cb" type="checkbox">
-          <span id="k2" class="taalkleur keus-uit-2__label">EN</span>
+          <a id="k2" href="index.php?lang=en" class="taalkleur keus-uit-2__label">EN</a>
         </span>
     </nav>
 
@@ -45,95 +45,137 @@
           </video>
         </div>
         <div class="playbutton">
-          <a href="https://vimeo.com/461288534"><i class="fas fa-play-circle pad"></i></a>
-          <a href="https://vimeo.com/461288534"><h3 class="pad">Video Afspelen</h3></a>
+          <a href="https://vimeo.com/461288534" target="_blank"><i class="fas fa-play-circle pad"></i></a>
+          <a href="https://vimeo.com/461288534" target="_blank"><h3 class="pad"><?php echo translate('video-afspelen') ?></h3></a>
         </div>
         <a href="#section-2"><i class="fas fa-angle-down arrowdown"></i></a>
       </section>
 
       <section class="section-2" id="section-2">
         <div id="contact">
-          <h2>Experiencing a security incident?</h2>
-          <div class="button_cont" align="center"><a class="example_b section2knop" href="#section-4" >Contact Ons</a></div>
+          <h2><?php echo translate('over-ons') ?></h2>
+          <div class="button_cont" align="center"><a class="example_b section2knop" href="#section-4" ><?php echo translate('contact-ons') ?></a></div>
         </div>
         <div class="overHuyat">
           <div class="num">
-          <em class="number">01</em>
-          <div class="numColor"></div>
-       </div>
+            <em class="number">01</em>
+            <div class="numColor"></div>
+          </div>
     
-        <img src="images/imag.jpg" alt="fgf" class="section2img">
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-           sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-           magna aliquyam erat, sed diam 
+        <img src="images/foto1.jpg" alt="fgf" class="section2img">
+        <p><?php echo translate('bewust-betrok') ?><br>
+            <?php echo translate('bewust-betrok-1') ?><br>
+            <?php echo translate('bewust-betrok-2') ?><br>
+            <?php echo translate('bewust-betrok-3') ?><br>
+            <?php echo translate('bewust-betrok-4') ?><br>
+            <?php echo translate('bewust-betrok-5') ?><br>  
         </p>
+
         </div>
         <div class="overHuyat2">
           <div class="num">
             <em class="number">02</em>
             <div class="numColor"></div>
           </div>
-          <img src="images/imag.jpg" alt="fgf" class="section2img">
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                magna aliquyam erat, sed diam </p>
+          <img src="images/foto2.jpg" alt="fgf" class="section2img">
+          <p>
+          <?php echo translate('prospectie-verkoop') ?><br>
+            <?php echo translate('prospectie-verkoop-1') ?><br>
+            <?php echo translate('prospectie-verkoop-2') ?><br>
+            <?php echo translate('prospectie-verkoop-3') ?><br>
+            <?php echo translate('prospectie-verkoop-4') ?><br>
+            <?php echo translate('prospectie-verkoop-5') ?><br>  
+          </p>
         </div> 
         <div class="overHuyat3">
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-              magna aliquyam erat, sed diam </p>
+          <p>          
+            <?php echo translate('creatieve-content-studio') ?><br>
+            <?php echo translate('creatieve-content-studio-1') ?><br>
+            <?php echo translate('creatieve-content-studio-2') ?><br>
+            <?php echo translate('creatieve-content-studio-3') ?><br>
+            <?php echo translate('creatieve-content-studio-4') ?><br>
+            <?php echo translate('creatieve-content-studio-5') ?><br>   </p>
           <div class="num">
             <em class="number">03</em>
             <div class="numColor"></div>
           </div>
-          <img src="images/imag.jpg" alt="fgf" class="section2img">
+          <img src="images/foto3.jpg" alt="fgf" class="section2img">
           
         </div> 
 
       </section>
 
       <section class="section-3" id="section-3">
-        <div id="onsWerk">
-          <h2>Ons Werk</h2>
-        </div>
-        <div class="onsWerk">
-            <div>
-                <p>Voor elk los onderdeel kan je bij<br>
-                  ons terecht. Kies je er<br>
-                  meerdere? Dan zorgen wij dat<br>
-                  alle services naadloos op elkaar<br>
-                  aansluiten. Zie hier een<br>
-                  overzicht van recent werk 
-                </p>
-                <div class="button_cont" align="center"><a class="example_b section3knop" href="" >Bekijk Cases</a></div>
-            </div>
+      <div id="onsWerk__titel">
+        <h2><?php echo translate('ons-werk') ?></h2>
+      </div>
+      <div class="onsWerk">
           <div>
-            <div id="slide">
+              <p><?php echo translate('ons-werk-tekst') ?> </p>
+                <div class="button_cont"><a class="example_b section3knop" href="#section-4" ><?php echo translate('bekijk-cases') ?></a></div>
+          </div>
+        <div>
+          <div id="slide">
               <span class="slide" onclick="currentSlide(1)"></span> 
               <span class="slide" onclick="currentSlide(2)"></span> 
               <span class="slide" onclick="currentSlide(3)"></span> 
               <span class="slide" onclick="currentSlide(4)"></span> 
             </div>
-          </div>
-        <div>
+        </div>
+      <div class="fotos">
+        <div class="small">
+
           <div class="mySlides fade">
-            <img src="images/imag.jpg" style="width:100%">
-          </div>
-          <div class="mySlides fade">
-            <img src="images/imag1.jpg" style="width:100%">
-          </div>
-          <div class="mySlides fade">
-            <img src="images/imag.jpg" style="width:100%">
-          </div>
-          <div class="mySlides fade">
-            <img src="images/imag1.jpg" style="width:100%">
+            <img src="images/kamil.png" style="width:100%">
           </div>
         
+      </div>
+        <div class="big">
+          <img src="images/kamil.png" style="width:100%">
+          <p><p><?php echo translate('kamil-text') ?></p></p>
         </div>
+
+        <div class="small">
+
+          <div class="mySlides fade">
+            <img src="images/duneya.png" style="width:100%">
+          </div>
+        
+      </div>
+        <div class="big">
+          <img src="images/duneya.png" style="width:100%">
+          <p><p><?php echo translate('duneya-text') ?></p></p>
+        </div>
+        <div class="small">
+
+          <div class="mySlides fade">
+            <img src="images/max.jpg" style="width:100%">
+          </div>
+        
+      </div>
+        <div class="big">
+          <img src="images/max.jpg" style="width:100%">
+          <p><p><?php echo translate('max-text') ?></p></p>
+        </div>
+        <div class="small">
+
+          <div class="mySlides fade">
+            <img src="images/case.jpg" style="width:100%">
+          </div>
+        
+      </div>
+        <div class="big">
+          <img src="images/case.jpg" style="width:100%">
+          <p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+            magna aliquyam erat, sed diam </p></p>
+        </div>
+
+      </div>
       </section>
 
       <section class="section-4" id="section-4">
-          <h2 class="contacttext">Neem contact met ons op (☕/🍻)</h3>
+          <h2 class="contacttext"><?php echo translate('neem-contact') ?> (☕/🍻)</h3>
           <?php
           $action=$_REQUEST['action'];
           if ($action=="")    
@@ -142,27 +184,27 @@
                 <form action="" method="POST">
                   <div class="contactform">
                     <div class="form__group naam">
-                      <input type="text" class="form__input" id="name" placeholder="Naam*" required/>
-                      <label for="name" class="form__label">Naam</label>
+                      <input type="text" class="form__input" id="name" placeholder="<?php echo translate('placeholder-naam') ?>" required/>
+                      <label for="name" class="form__label"><?php echo translate('naam') ?></label>
                     </div>
                     <div class="form__group email">
-                      <input type="text" class="form__input" id="email" placeholder="Email*" required/>
-                      <label for="email" class="form__label">Email</label>
+                      <input type="text" class="form__input" id="email" placeholder="<?php echo translate('placeholder-email') ?>" required/>
+                      <label for="email" class="form__label"><?php echo translate('email') ?></label>
                     </div>
                     <div class="form__group onderwerp">
-                      <input type="text" class="form__input" id="onderwerp" placeholder="Onderwerp*" required/>
-                      <label for="onderwerp" class="form__label">Onderwerp</label>
+                      <input type="text" class="form__input" id="onderwerp" placeholder="<?php echo translate('placeholder-onderwerp') ?>" required/>
+                      <label for="onderwerp" class="form__label"><?php echo translate('onderwerp') ?></label>
                     </div>
                     <div class="form__group tel">
-                      <input type="number" class="form__input" id="nummer" placeholder="Telefoon Nummer*" required/>
-                      <label for="nummer" class="form__label">Telefoon Nummer</label>
+                      <input type="number" class="form__input" id="nummer" placeholder="<?php echo translate('placeholder-telefoon') ?>" required/>
+                      <label for="nummer" class="form__label"><?php echo translate('telefoon') ?></label>
                     </div>
                     <div class="form__group bericht">
-                      <textarea class="form__input1" id="bericht" placeholder="Bericht*" required></textarea>
-                      <label for="bericht" class="form__label">Bericht</label>
+                      <textarea class="form__input1" id="bericht" placeholder="<?php echo translate('placeholder-bericht') ?>" required></textarea>
+                      <label for="bericht" class="form__label"><?php echo translate('bericht') ?></label>
                     </div>
                     <div class="submit">
-                      <input type="submit" class="submitinput" placeholder="Verzenden" />
+                      <input type="submit" class="submitinput" placeholder="<?php echo translate('placeholder-verzenden') ?>" />
                     </div>
                   </div>
                 </form>
@@ -190,6 +232,28 @@
       </section>
 
     </div>
+    <footer class="section-5 center">
+        <div class="social-media">
+          <a onClick="window.open('https://github.com/Kamil38/IDP/');" class="social-media-link">
+            <i class="fab fa-github-square"></i>
+          </a> 
+          <a onClick="window.open('https://www.youtube.com/channel/UCzQAU9KGtwioNyHTaa4bnVA/featured?view_as=subscriber');" class="social-media-link">
+            <i class="fab fa-youtube"></i>
+          </a> 
+          <a onClick="window.open('https://www.facebook.com/kamilHLW');" class="social-media-link">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a onClick="window.open('https://www.instagram.com/huyatagency/');" class="social-media-link">
+            <i class="fab fa-instagram-square"></i>
+          </a>
+          <a href="mailto: huyatagency@gmail.com" class="social-media-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p class="portfolioMA">
+        <?php echo translate('rechten') ?> - &copy; HUYAT - <?php echo translate('design') ?>
+        </p>
+      </footer>
     
 
 
